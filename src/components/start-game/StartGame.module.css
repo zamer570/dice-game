@@ -1,0 +1,48 @@
+.start_game{
+    display: flex;
+    align-items: center;
+    max-width: 1180px;
+    height:100vh;
+
+    margin: 0 auto;
+}
+
+.start_game div h1{
+    font-size: 86px;
+    font-weight: 700;
+    line-height: 144px;
+    /* white-space: nowrap; if there is white space */
+}
+
+.start_game div{
+    position: relative;
+    margin-top: -50px
+}
+
+.start_game div button{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+
+    background: black;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px; 
+    min-width: 220px;
+    
+    position: absolute;
+    right:0;
+
+    border: 1px solid transparent;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+
+}
+
+.start_game div button:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    transition: 0.3s ease-in;
+}

@@ -1,24 +1,18 @@
-import logo from './logo.svg';
+import React, {useState} from 'react'
 import './App.css';
+import StartGame from './components/start-game/StartGame';
+import GamePlay from './components/GamePlay/GamePlay';
 
 function App() {
+  const [isGameStarted, setIsGameStarted] = useState(false);
+
+  const toggleGame = () =>{
+    setIsGameStarted(!isGameStarted);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {isGameStarted ? <GamePlay/>: <StartGame toggle = {toggleGame}/>}
+    </>
   );
 }
 
